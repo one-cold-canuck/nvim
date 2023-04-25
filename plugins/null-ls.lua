@@ -8,7 +8,9 @@ return {
     -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/formatting
     -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
     config.sources = {
-      -- Set a formatter
+      -- null_ls.builtins.formatting.clang_format,
+      -- null_ls.builtins.formatting.clang_check,
+      -- null_ls.builtins.code_actions.gitsigns
       -- null_ls.builtins.formatting.stylua,
       -- null_ls.builtins.formatting.prettier,
     }

@@ -1,5 +1,8 @@
 -- TODO: (GH)
-
+-- TODO(gerald):
+-- TODO():
+-- TODO
+--
 return {
   -- You can also add new plugins here as well:
   -- Add plugins, the lazy syntax
@@ -20,6 +23,7 @@ return {
     event = "User AstroFile",
     cmd = "TodoQuickFix",
     keys = {
-      { "<leader>T T", "<cmd>TodoTelescope<cr>" }, desc = "Open TODOs in Telescope" },
+      { "<leader>fT", "<cmd>TodoTelescope<cr>" }, desc = "Open TODOs in Telescope" },
+    pattern = [[\b(KEYWORDS):]],
   },
 }

@@ -11,21 +11,37 @@ return {
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bD"] = {
       function()
-        require("astronvim.utils.status").heirline.buffer_picker(function(bufnr) require("astronvim.utils.buffer").close(
-          bufnr) end)
+        require("astronvim.utils.status").heirline.buffer_picker(function(bufnr)
+          require("astronvim.utils.buffer").close(
+            bufnr)
+        end)
       end,
       desc = "Pick to close",
     },
+    ["<leader>lwa"] = {
+      function()
+        vim.lsp.buf.add_workspace_folder()
+      end,
+    },
+    ["<leader>lwr"] = {
+      function()
+        vim.lsp.buf.remove_workspace_folder()
+      end,
+    },
+    ["<C-a>"] = {
+      function()
+        vim.lsp.buf.code_action()
+      end },
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
+    ["<leader>lw"] = { name = "Workspaces" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
-    ["<leader>a"] = { "<cmd>echo 'Hello world!'<cr>", desc = "Say hello world" },
-    ["<leader>F"] = { "<cmd>lua vim.lsp.buf.code_action()<cr>", desc = "Apply fix" },
+
   },
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
   },
-}
+};
