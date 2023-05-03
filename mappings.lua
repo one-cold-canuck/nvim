@@ -32,6 +32,7 @@ return {
       function()
         vim.lsp.buf.code_action()
       end },
+    ["<F8>"] = { "<cmd>!w:\\handmade\\code\\build.bat<cr>", desc = "Build" },
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
